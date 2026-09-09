@@ -1,162 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPrepStudio - Launching Soon</title>
-    <style>
-        /* Modern Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; /* Cleaner Font */
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden; /* Prevent scrolling if possible */
-            
-            /* -- BACKGROUND CONFIGURATION -- */
-            /* Current: Solid deep purple background. */
-            /* If you upload 'background.jpg', uncomment the next line: */
-            /* background: linear-gradient(rgba(20, 10, 30, 0.7), rgba(20, 10, 30, 0.7)), url('background.jpg') no-repeat center center/cover; */
-            background-color: #2e1e3e; /* Complementary Deep Purple solid color */
-        }
-
-        /* The frosted glass container */
-        .coming-soon-container {
-            width: 90%;
-            max-width: 580px;
-            padding: 50px 30px;
-            background: rgba(255, 255, 255, 0.1); /* Frosted effect */
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-        }
-
-        /* -- LOGO IMAGE FIX -- */
-        .actual-logo-image {
-            display: block;
-            margin: 0 auto 30px auto; /* Center logo, add space below */
-            width: 80%; /* Takes up 80% of the box width */
-            max-width: 320px; /* Limits maximum size on desktop */
-            height: auto;
-            border-radius: 10px; /* Soften edges */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Slight lift */
-        }
-
-        /* Text Styling */
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 300;
-        }
-
-        .launch-status {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .sparkle-text {
-            color: #FFD700; /* Gold sparkle text */
-            font-weight: bold;
-        }
-
-        .heart {
-            color: #e25555; /* Red heart */
-        }
-
-        .made-with-love {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 25px;
-        }
-
-        .instagram-follow {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .instagram-handle {
-            font-weight: bold;
-            color: #FF1493; /* Bright Pink for handle */
-            text-decoration: none;
-        }
-        
-        .instagram-handle:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer status line */
-        .footer-status-line {
-            width: 100%;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.2);
-            margin: 30px 0 15px 0;
-        }
-
-        .website-status {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPrepStudio | Launching Soon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* Replace logo.png with your exact image file name */
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('VPrePStudio.logo.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 600px;
+      width: 90%;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+    .launch-notice {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #ffd700;
+    }
+    .subtext {
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      color: #eaeaea;
+    }
+    .instagram-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #ff69b4;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .instagram-link:hover {
+      text-decoration: underline;
+    }
+    .footer-status {
+      font-size: 1rem;
+      color: #dddddd;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="coming-soon-container">
-        <!-- -- THE ACTUAL LOGO -- -->
-        <!-- Make sure you have image_6.png uploaded to your repository! -->
-        <img src="VPrePStudio.logo.jpeg" alt="VPrepStudio Actual Logo" class="actual-logo-image">
+  <div class="container">
+    <h1>VPrepStudio</h1>
+    <p class="tagline">Personalized Gifts • Jewelry • Keepsakes</p>
+    
+    <p class="launch-notice">✨ Launching Soon....!!! ✨</p>
+    <p class="subtext">crafted with Love, Made just for you ❤️</p>
+    
+    <p>
+      Follow us on Instagram: 
+      <a class="instagram-link" href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">
+        @vprepstudio
+      </a>
+    </p>
 
-        <h1>VPrepStudio</h1>
-        <p class="tagline">Personalized Gifts • Jewelry • Keepsakes</p>
-
-        <div class="launch-status">
-            <span>✨</span>
-            <span class="sparkle-text">Launching Soon....!!!</span>
-            <span>✨</span>
-        </div>
-        
-        <p class="made-with-love">crafted with Love, Made just for you <span class="heart">❤️</span></p>
-        
-        <p class="instagram-follow">
-            Follow us on Instagram: 
-            <a href="https://www.instagram.com/vprepstudio" target="_blank" class="instagram-handle" rel="noopener noreferrer">@vprepstudio</a>
-        </p>
-
-        <div class="footer-status-line"></div>
-        
-        <p class="website-status">
-            <span>🌐</span> Website Coming Soon
-        </p>
+    <div class="footer-status">
+      🌐 Website Coming Soon
     </div>
+  </div>
 
 </body>
 </html>
