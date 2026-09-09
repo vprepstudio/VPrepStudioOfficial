@@ -5,65 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VPrepStudio | Launching Soon</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #fafafa;
-      color: #333;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
+      /* Replace logo.png with your exact image file name */
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('VPrePStudio.logo.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
     }
     .container {
       max-width: 600px;
+      width: 90%;
       padding: 40px 20px;
-      background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-radius: 12px;
-    }
-    .logo {
-      max-width: 180px;
-      height: auto;
-      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
     h1 {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #111;
+      letter-spacing: 1px;
     }
     .tagline {
-      font-size: 1.1rem;
-      color: #666;
+      font-size: 1.2rem;
+      color: #f0f0f0;
       margin-bottom: 24px;
-      font-weight: 500;
+      font-weight: 400;
     }
     .launch-notice {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 12px;
+      color: #ffd700;
     }
     .subtext {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-bottom: 24px;
-      color: #444;
+      color: #eaeaea;
     }
     .instagram-link {
       display: inline-block;
       margin-bottom: 24px;
       font-weight: 600;
-      color: #e1306c;
+      color: #ff69b4;
       text-decoration: none;
+      font-size: 1.1rem;
     }
     .instagram-link:hover {
       text-decoration: underline;
     }
     .footer-status {
-      font-size: 0.95rem;
-      color: #888;
-      border-top: 1px solid #eee;
+      font-size: 1rem;
+      color: #dddddd;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
       padding-top: 20px;
     }
   </style>
@@ -71,9 +80,6 @@
 <body>
 
   <div class="container">
-    <!-- Replace logo.png with your actual logo file name (e.g., logo.png, logo.jpg, logo.svg) -->
-    <img src="VPrePStudio.logo.jpeg" alt="VPrepStudio Logo" class="logo">
-
     <h1>VPrepStudio</h1>
     <p class="tagline">Personalized Gifts • Jewelry • Keepsakes</p>
     
