@@ -263,6 +263,7 @@
 
     .about-grid,
     .features-grid,
+    .catalog-grid,
     .process-grid,
     .contact-grid {
       display: grid;
@@ -402,6 +403,46 @@
       text-align: center;
     }
 
+    .catalog-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-card {
+      background: linear-gradient(180deg, #fff 0%, #f7fbff 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px 20px;
+      box-shadow: 0 14px 26px rgba(0, 120, 212, 0.06);
+    }
+
+    .product-card h3 {
+      margin-bottom: 14px;
+      color: var(--primary-deep);
+      font-size: 1.35rem;
+    }
+
+    .product-card p {
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .catalog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .catalog-tag {
+      display: inline-block;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(0, 120, 212, 0.06);
+      color: var(--primary-deep);
+      border: 1px solid rgba(0, 120, 212, 0.08);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
     .contact-grid {
       grid-template-columns: 1.2fr 0.8fr;
       align-items: stretch;
@@ -505,6 +546,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#products">Products</a>
+        <a href="#catalog">Catalog</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -623,6 +665,141 @@
           <div class="gallery-card"><div class="gallery-inner">Birthday Gifts</div></div>
           <div class="gallery-card"><div class="gallery-inner">Wedding Keepsakes</div></div>
           <div class="gallery-card"><div class="gallery-inner">Custom Occasion Sets</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our product catalog</h2>
+          <p>Explore the handcrafted categories we are preparing to showcase on the website, with custom-made pieces for every mood, occasion, and gifting need.</p>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="product-card">
+            <h3>Gift & Keepsake Accessories</h3>
+            <p>Personalized pieces perfect for gifting, travel, and everyday charm.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Keychains</span>
+              <span class="catalog-tag">Flower Keychains</span>
+              <span class="catalog-tag">Teddy Keychains</span>
+              <span class="catalog-tag">Dog Paw Keychains</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Floral Arrangements</h3>
+            <p>Custom floral details designed to brighten celebrations and gifting moments.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Single Rose</span>
+              <span class="catalog-tag">Lily</span>
+              <span class="catalog-tag">Sunflower</span>
+              <span class="catalog-tag">Bouquet</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Fashion & Carry</h3>
+            <p>Handcrafted accessories that blend utility, beauty, and personal style.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Jute Bags</span>
+              <span class="catalog-tag">Handbags</span>
+              <span class="catalog-tag">Hair Clutch</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Home & Decor</h3>
+            <p>Decor pieces for living spaces, entrances, and festive occasions.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Mirror Wall</span>
+              <span class="catalog-tag">Mirror Stand</span>
+              <span class="catalog-tag">Door Decor</span>
+              <span class="catalog-tag">Door Hangings</span>
+              <span class="catalog-tag">Windchime</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Personalized Name & Gift Items</h3>
+            <p>Custom elements for gifting, personal identity, and home styling.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Nameplate</span>
+              <span class="catalog-tag">Photo Frames</span>
+              <span class="catalog-tag">Mirror Keychain</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Vehicle & Everyday Charm</h3>
+            <p>Small decorative items that add personality to cars, bikes, and everyday use.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Car Decor</span>
+              <span class="catalog-tag">Bike Charm</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Hair & Beauty Accessories</h3>
+            <p>Stylish hairpieces and beauty accessories with a handmade finish.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Hair Band</span>
+              <span class="catalog-tag">Hair Rubber</span>
+              <span class="catalog-tag">Hair Clips</span>
+              <span class="catalog-tag">Bangle Hair Accessory</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Desk & Study</h3>
+            <p>Functional and thoughtful accessories for study spaces and gifting.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Pen Holder</span>
+              <span class="catalog-tag">Pencil Holder</span>
+              <span class="catalog-tag">Pen Bouquet</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Kids & Fun Gifts</h3>
+            <p>Bright, cheerful pieces made for children and playful gifting moments.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Kids Collection</span>
+              <span class="catalog-tag">Toys</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Phone & Utility Accessories</h3>
+            <p>Practical yet stylish items for everyday convenience.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Phone Holder</span>
+              <span class="catalog-tag">Charging Accessory</span>
+              <span class="catalog-tag">Phone Cover</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Festive & Spiritual Decor</h3>
+            <p>Meaningful and occasion-ready pieces for festive home styling.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Shubh Labh</span>
+              <span class="catalog-tag">Pooja Mandap</span>
+              <span class="catalog-tag">Deepam Holder</span>
+              <span class="catalog-tag">Curtain Holder</span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <h3>Collectors & Custom Designs</h3>
+            <p>Original handmade items crafted to suit unique preferences and personal stories.</p>
+            <div class="catalog-tags">
+              <span class="catalog-tag">Custom Gift</span>
+              <span class="catalog-tag">Bulk Orders</span>
+              <span class="catalog-tag">Worldwide Delivery</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
