@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shop VPrepStudio for personalized handmade gifts, chenille pipe cleaner flowers, custom keepsakes, wedding favors, birthday gifts, and thoughtful decor made with love." />
-  <meta name="keywords" content="personalized gifts, handmade gifts, custom keepsakes, chenille pipe cleaner flowers, wedding favors, birthday gifts, gift hampers, VPrepStudio" />
-  <meta property="og:title" content="VPrepStudio | Personalized Handmade Gifts & Keepsakes" />
-  <meta property="og:description" content="Discover custom handmade gifts, floral arrangements, keepsakes, event favors, and colorful decor for every special occasion." />
+  <meta name="description" content="VPrep creates handmade, personalized artisan gifts, floral keepsakes, and custom gift arrangements for life’s meaningful moments." />
+  <meta name="keywords" content="VPrep, handmade gifts, custom gifts, artisan gifting, chenille floral arrangements, personalized keepsakes, custom orders" />
+  <meta property="og:title" content="VPrep | Handmade Gifts Tailored to You" />
+  <meta property="og:description" content="Warm, handcrafted gifts and keepsakes made for birthdays, weddings, baby showers, and special milestones." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vprepstudio.com/" />
   <link rel="canonical" href="https://vprepstudio.com/" />
-  <title>VPrepStudio | Personalized Handmade Gifts & Keepsakes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>VPrep | Handmade Gifts Tailored to You</title>
   <style>
     :root {
-      --bg: #f3f2f1;
-      --panel: #ffffff;
-      --card: #ffffff;
-      --primary: #0078d4;
-      --primary-deep: #005a9e;
-      --secondary: #e1f3ff;
-      --accent: #8a63d2;
-      --gold: #c19c00;
-      --text: #1b1b1b;
-      --muted: #5c5c5c;
-      --line: rgba(0, 120, 212, 0.12);
-      --shadow: 0 18px 45px rgba(0, 88, 150, 0.1);
+      --cream: #FDFBF7;
+      --cream-deep: #F4EDE6;
+      --forest: #2C402E;
+      --forest-soft: #3C5743;
+      --terracotta: #C96E5A;
+      --terracotta-soft: #E8BEA5;
+      --brown: #7A5B49;
+      --charcoal: #1E1F1E;
+      --muted: #5F5A57;
+      --panel: #FFFDF9;
+      --line: rgba(44, 64, 46, 0.12);
+      --shadow: 0 18px 45px rgba(60, 42, 29, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,9 +35,9 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg, #f5eff4 0%, #f8f4f4 100%);
-      color: var(--text);
+      font-family: 'Manrope', 'Segoe UI', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
       line-height: 1.6;
     }
 
@@ -47,12 +50,17 @@
       margin: 0 auto;
     }
 
+    .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(255, 250, 252, 0.86);
-      backdrop-filter: blur(10px);
+      z-index: 40;
+      background: rgba(253, 251, 247, 0.82);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
@@ -60,839 +68,931 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
       gap: 20px;
+      min-height: 82px;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      color: var(--forest);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--primary-deep);
     }
 
     .brand-mark {
-      width: 56px;
-      height: 56px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(0, 120, 212, 0.18);
-      box-shadow: 0 8px 20px rgba(0, 120, 212, 0.1);
-      background: var(--panel);
-    }
-
-    .brand-text {
-      font-size: 1rem;
-      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--forest) 0%, var(--terracotta) 100%);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(44,64,46,0.15);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
-      font-size: 0.96rem;
+      gap: 30px;
       color: var(--muted);
+      font-size: 0.9rem;
       flex-wrap: wrap;
     }
 
-    .nav-links a:hover { color: var(--primary); }
+    .nav-links a { transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--forest); }
 
     .nav-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 22px;
+      gap: 10px;
+      padding: 12px 18px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-      color: #fff;
+      border: 1px solid rgba(44,64,46,0.12);
+      background: var(--panel);
+      color: var(--forest);
       font-weight: 700;
-      box-shadow: 0 14px 25px rgba(0, 120, 212, 0.2);
+      box-shadow: 0 10px 20px rgba(44, 64, 46, 0.04);
     }
 
-    .hero {
-      padding: 54px 0 24px;
+    .instagram-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      border: 2px solid currentColor;
+      border-radius: 5px;
+      position: relative;
     }
 
-    .hero-wrap {
+    .instagram-icon::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1.5px solid currentColor;
+      border-radius: 50%;
+    }
+
+    .instagram-icon::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+      right: 3px;
+      top: 3px;
+    }
+
+    .hero { padding: 52px 0 24px; }
+    .hero-shell { padding: 20px 0 0; }
+
+    .hero-top {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 34px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.74), rgba(249,240,245,0.9));
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      box-shadow: var(--shadow);
-      padding: 32px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 52px;
+      align-items: end;
+      margin-bottom: 30px;
     }
 
     .eyebrow {
       display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(111, 58, 104, 0.08);
-      color: var(--primary);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
       margin-bottom: 18px;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--brown);
     }
 
     h1 {
-      font-size: clamp(2.7rem, 5vw, 5.1rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-      color: var(--primary-deep);
-      margin-bottom: 18px;
+      font-size: clamp(3.2rem, 5vw, 6rem);
+      line-height: 0.9;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 0;
     }
 
-    h1 .brand-accent {
+    h1 em {
       display: block;
-      color: var(--primary);
-      font-weight: 800;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--brown);
     }
 
-    .subtitle {
-      max-width: 620px;
-      font-size: 1.12rem;
+    .hero-copy { max-width: 700px; }
+
+    .hero-summary {
+      font-size: 1.05rem;
       color: var(--muted);
-      margin-bottom: 22px;
+      padding-bottom: 16px;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
+    .hero-summary p { margin-bottom: 12px; }
 
-    .primary-btn,
-    .secondary-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 999px;
+    .hero-summary .highlight {
+      list-style: none;
+      padding-top: 6px;
+      color: var(--forest);
       font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .primary-btn {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-      color: white;
-      box-shadow: 0 14px 28px rgba(0, 120, 212, 0.2);
+    .hero-summary .highlight li::before {
+      content: "•";
+      color: var(--terracotta);
+      margin-right: 10px;
+      font-size: 1.25rem;
     }
 
-    .secondary-btn {
-      background: #fff;
-      border: 1px solid var(--line);
-      color: var(--primary-deep);
-    }
-
-    .primary-btn:hover,
-    .secondary-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .mini-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .mini-stats span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      background: rgba(255,255,255,0.68);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-    }
-
-    .mini-stats strong {
-      color: var(--primary-deep);
-    }
-
-    .logo-panel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo-circle {
-      width: min(100%, 560px);
-      aspect-ratio: 1;
-      background: rgba(255, 255, 255, 0.72);
-      border: 3px solid rgba(0, 120, 212, 0.25);
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: inset 0 0 0 8px rgba(0, 120, 212, 0.03), 0 20px 40px rgba(0, 120, 212, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-    }
-
-    .logo-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
-
-    section {
-      padding: 34px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      color: var(--primary-deep);
-      margin-bottom: 10px;
-    }
-
-    .section-header p {
-      color: var(--muted);
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .about-grid,
-    .features-grid,
-    .catalog-grid,
-    .process-grid,
-    .contact-grid {
+    .hero-gallery {
       display: grid;
-      gap: 24px;
-    }
-
-    .about-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .card {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 26px;
-      box-shadow: 0 12px 30px rgba(89, 59, 88, 0.06);
+    .gallery-item {
+      min-height: 300px;
+      border-radius: 28px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(44, 64, 46, 0.08);
     }
 
-    .card h3 {
-      color: var(--primary-deep);
-      font-size: 1.5rem;
+    .gallery-item.tall { min-height: 420px; }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.12), rgba(20,20,20,0.2));
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      z-index: 1;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .occasions {
+      background: var(--forest);
+      color: rgba(255,255,255,0.9);
+      padding: 68px 0 76px;
+      margin-top: 20px;
+    }
+
+    .occasions-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .occasions-tag {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
       margin-bottom: 12px;
     }
 
-    .card p,
-    .card li {
-      color: var(--muted);
-      font-size: 1.02rem;
+    .occasions-header h2 {
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      line-height: 0.96;
+      color: #f5efe8;
+      font-weight: 600;
     }
 
-    .check-list {
-      list-style: none;
+    .occasions-description {
+      max-width: 420px;
+      color: rgba(255,255,255,0.74);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .occasion-grid {
       display: grid;
-      gap: 10px;
-      margin-top: 12px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .check-list li::before {
-      content: "✦";
-      color: var(--primary);
-      margin-right: 10px;
+    .occasion-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      padding: 24px 20px;
+      min-height: 220px;
+    }
+
+    .occasion-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #fefaf4;
+      line-height: 1;
+    }
+
+    .occasion-card p {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .process { padding: 84px 0 66px; }
+
+    .process-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .process-head h2 {
+      font-size: clamp(2.8rem, 4vw, 4.2rem);
+      line-height: 0.96;
+      color: var(--forest);
+      font-weight: 600;
+    }
+
+    .process-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
       font-weight: 700;
-    }
-
-    .features-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .feature {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 26px 20px;
-      text-align: center;
-      box-shadow: 0 12px 30px rgba(89, 59, 88, 0.05);
-    }
-
-    .feature-icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      margin: 0 auto 16px;
-      font-size: 2rem;
-      background: linear-gradient(135deg, rgba(111,58,104,0.1), rgba(216,167,191,0.28));
-      color: var(--primary);
-    }
-
-    .feature h3 {
-      margin-bottom: 8px;
-      color: var(--primary-deep);
-      font-size: 1.18rem;
     }
 
     .process-grid {
+      display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .step {
-      background: linear-gradient(180deg, #fffafc 0%, #ffffff 100%);
+      background: rgba(255,255,255,0.72);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px 18px;
-      position: relative;
-    }
-
-    .step-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, var(--primary) 0%, #f5b26b 100%);
-      color: white;
-      font-weight: 800;
-    }
-
-    .step h3 {
-      color: var(--primary-deep);
-      margin-bottom: 8px;
-      font-size: 1.12rem;
-    }
-
-    .gallery-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .gallery-card {
-      min-height: 220px;
-      border-radius: 24px;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid var(--line);
-      background: linear-gradient(135deg, #f3dfe8, #f6f0f2);
+      border-radius: 22px;
+      padding: 24px 20px 22px;
       box-shadow: var(--shadow);
     }
 
-    .gallery-card:nth-child(1) { background: linear-gradient(135deg, #f4d7dc, #f7edf2); }
-    .gallery-card:nth-child(2) { background: linear-gradient(135deg, #e8dcf3, #f8f4fb); }
-    .gallery-card:nth-child(3) { background: linear-gradient(135deg, #fce4cb, #f6f3f0); }
-
-    .gallery-inner {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: clamp(1.2rem, 2vw, 2rem);
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--primary-deep);
-      padding: 18px;
-      text-align: center;
-    }
-
-    .catalog-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .product-card {
-      background: linear-gradient(180deg, #fff 0%, #f7fbff 100%);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px 20px;
-      box-shadow: 0 14px 26px rgba(0, 120, 212, 0.06);
-    }
-
-    .product-card h3 {
-      margin-bottom: 14px;
-      color: var(--primary-deep);
-      font-size: 1.35rem;
-    }
-
-    .product-card p {
-      margin-bottom: 14px;
-      color: var(--muted);
-    }
-
-    .catalog-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .catalog-tag {
+    .step-number {
       display: inline-block;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(0, 120, 212, 0.06);
-      color: var(--primary-deep);
-      border: 1px solid rgba(0, 120, 212, 0.08);
       font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .step h3 {
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 10px;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    .cta-banner { padding: 14px 0 90px; }
+
+    .cta-shell {
+      background: linear-gradient(135deg, #f6efe7 0%, #f3e8de 100%);
+      border-radius: 28px;
+      border: 1px solid rgba(44,64,46,0.08);
+      padding: 54px 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
       font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .cta-shell h2 {
+      font-size: clamp(2.6rem, 4vw, 4.4rem);
+      line-height: 0.95;
+      color: var(--forest);
+      font-weight: 600;
+    }
+
+    .cta-shell h2 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .cta-shell p {
+      margin: 16px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: riseIn 0.9s ease forwards;
+    }
+
+    .reveal-delay-1 { animation-delay: 0.12s; }
+    .reveal-delay-2 { animation-delay: 0.22s; }
+    .reveal-delay-3 { animation-delay: 0.3s; }
+    .reveal-delay-4 { animation-delay: 0.38s; }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chenille-scene {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(34, 29, 21, 0.12));
+    }
+
+    .flower,
+    .mini-flower,
+    .button,
+    .mini-bloom {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,0.85) 0 12%, rgba(255,255,255,0.15) 13%, transparent 14%),
+        repeating-radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.18) 0 10%, rgba(0,0,0,0.03) 10% 15%, transparent 15% 20%),
+        linear-gradient(135deg, #f3d2af 0%, #cf7a57 28%, #7a3d4f 100%);
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,0.08), 0 10px 16px rgba(69, 46, 32, 0.18);
+    }
+
+    .stem {
+      position: absolute;
+      width: 10px;
+      height: 170px;
+      background: linear-gradient(180deg, #6a925c 0%, #3d5d39 100%);
+      border-radius: 999px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.12);
+    }
+
+    .s1 { left: 38%; height: 210px; }
+    .s2 { left: 52%; height: 240px; }
+    .s3 { left: 62%; height: 200px; }
+
+    .flower.f1 { width: 90px; height: 90px; left: 20%; top: 15%; }
+    .flower.f2 { width: 110px; height: 110px; left: 45%; top: 8%; }
+    .flower.f3 { width: 74px; height: 74px; left: 60%; top: 26%; }
+    .flower.f4 { width: 96px; height: 96px; left: 34%; top: 34%; }
+
+    .frame-scene .frame-arch {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 14px solid rgba(255,255,255,0.7);
+      border-bottom: none;
+      border-radius: 200px 200px 0 0;
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+    }
+
+    .frame-scene .frame-arch.inner {
+      width: 110px;
+      height: 110px;
+      border-width: 10px;
+      top: 55%;
+      border-color: rgba(122,91,73,0.8);
+    }
+
+    .mini-flower {
+      width: 44px;
+      height: 44px;
+      background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.7) 0 10%, transparent 11%), linear-gradient(135deg, #d79c76 0%, #b55b5d 55%, #8a5a39 100%);
+    }
+
+    .flower-a { left: 26%; top: 58%; }
+    .flower-b { left: 48%; top: 66%; }
+    .flower-c { left: 68%; top: 52%; }
+
+    .tray-scene .tray {
+      position: absolute;
+      left: 18%;
+      right: 18%;
+      bottom: 10%;
+      height: 30%;
+      border-radius: 30px 30px 24px 24px;
+      background: linear-gradient(180deg, #f0d8b7 0%, #d4ad7a 100%);
+      border: 1px solid rgba(122,91,73,0.25);
+      box-shadow: inset 0 14px 18px rgba(255,255,255,0.18);
+    }
+
+    .tray-scene .bloom {
+      width: 72px;
+      height: 72px;
+      bottom: 24%;
+    }
+
+    .tray-scene .bloom.one { left: 22%; }
+    .tray-scene .bloom.two { left: 44%; }
+    .tray-scene .bloom.three { left: 66%; }
+
+    .box-scene .gift-box {
+      position: absolute;
+      width: 190px;
+      height: 160px;
+      left: 50%;
+      bottom: 14%;
+      transform: translateX(-50%);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #c97d5d 0%, #8f5047 100%);
+      border: 1px solid rgba(75,44,30,0.16);
+      box-shadow: 0 22px 26px rgba(77, 46, 35, 0.18);
+    }
+
+    .box-scene .ribbon {
+      position: absolute;
+      width: 26px;
+      height: 180px;
+      left: 50%;
+      bottom: 14%;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #f4e5d2 0%, #cf9b67 100%);
+      border-radius: 999px;
+      box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    }
+
+    .box-scene .ribbon::before,
+    .box-scene .ribbon::after {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 26px;
+      background: linear-gradient(90deg, #f5e7d7 0%, #d3a06e 100%);
+      border-radius: 999px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .box-scene .ribbon::before { top: 16%; }
+    .box-scene .ribbon::after { top: 52%; }
+
+    .mini-bloom {
+      width: 56px;
+      height: 56px;
+      bottom: 34%;
+    }
+
+    .mini-bloom.b1 { left: 28%; }
+    .mini-bloom.b2 { right: 28%; }
+
+    .contact-section {
+      padding: 84px 0 100px;
     }
 
     .contact-grid {
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: stretch;
-    }
-
-    .contact-card {
-      background: linear-gradient(135deg, rgba(111, 58, 104, 0.06), rgba(216,167,191,0.12));
-    }
-
-    .contact-box {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
     }
 
-    .contact-item {
-      background: rgba(255,255,255,0.75);
+    .contact-card,
+    .info-card {
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 28px;
     }
 
-    .contact-item strong {
-      display: block;
-      color: var(--primary-deep);
-      margin-bottom: 6px;
-      font-size: 0.9rem;
+    .contact-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .contact-link {
-      color: var(--primary);
+      color: var(--brown);
       font-weight: 700;
     }
 
-    .footer {
-      padding: 30px 0 48px;
-      text-align: center;
+    .contact-card h3 {
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      line-height: 0.96;
+      color: var(--forest);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .contact-card p {
       color: var(--muted);
-      font-size: 0.95rem;
+      margin-bottom: 22px;
+      max-width: 580px;
+    }
+
+    .order-form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .order-form label {
+      display: grid;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--forest);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .order-form input,
+    .order-form textarea {
+      width: 100%;
+      border: 1px solid rgba(44,64,46,0.12);
+      background: rgba(253,251,247,0.9);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      color: var(--charcoal);
+      resize: vertical;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .order-form input:focus,
+    .order-form textarea:focus {
+      outline: none;
+      border-color: rgba(201,110,90,0.65);
+      box-shadow: 0 0 0 4px rgba(201,110,90,0.12);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .form-actions button {
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 14px 22px;
+      background: linear-gradient(135deg, var(--forest) 0%, var(--terracotta) 100%);
+      color: white;
+      font: inherit;
+      font-weight: 700;
+      box-shadow: 0 16px 26px rgba(44,64,46,0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-actions button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 28px rgba(44,64,46,0.2);
+    }
+
+    .form-actions a {
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .info-card {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mini-panel {
+      background: linear-gradient(180deg, rgba(249,244,238,0.9), rgba(255,255,255,0.9));
+      border: 1px solid rgba(44,64,46,0.06);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .mini-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+      font-weight: 700;
+    }
+
+    .mini-panel a,
+    .mini-panel p {
+      color: var(--forest);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .highlight-panel {
+      background: linear-gradient(135deg, rgba(244,237,230,0.95), rgba(255,255,255,0.95));
     }
 
     @media (max-width: 980px) {
-      .hero-wrap,
-      .about-grid,
-      .contact-grid,
-      .features-grid,
-      .process-grid,
-      .gallery-strip {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-wrap {
+      .hero-top, .occasions-header, .process-head, .contact-grid {
         grid-template-columns: 1fr;
+        display: grid;
       }
 
-      .logo-panel {
-        order: -1;
+      .hero-top { gap: 26px; }
+
+      .occasion-grid, .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 720px) {
       .nav {
         flex-wrap: wrap;
         justify-content: center;
+        padding: 16px 0;
       }
 
       .nav-links {
         justify-content: center;
+        gap: 18px;
       }
 
-      .about-grid,
-      .contact-grid,
-      .features-grid,
-      .process-grid,
-      .gallery-strip,
-      .catalog-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
+      .hero-gallery, .occasion-grid, .process-grid, .field-row { grid-template-columns: 1fr; }
 
-      .hero {
-        padding-top: 32px;
-      }
+      .gallery-item { min-height: 240px; }
+      .gallery-item.tall { min-height: 300px; }
 
-      .hero-wrap {
-        padding: 24px 18px;
-      }
+      .occasions-header, .process-head { align-items: start; }
+      .cta-shell { padding: 42px 18px; }
+      .contact-card, .info-card { padding: 22px 18px; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a href="#home" class="brand" aria-label="VPrepStudio home">
-        <img class="brand-mark" src="VPrePStudio.logo.jpeg" alt="VPrepStudio logo" />
-        <span class="brand-text">VPrepStudio</span>
+      <a href="#home" class="brand" aria-label="VPrep home">
+        <span class="brand-mark">V</span>
+        <span>VPrep</span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
+        <a href="#gifts">Gifts</a>
+        <a href="#occasions">Occasions</a>
+        <a href="#custom-orders">Custom orders</a>
         <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#catalog">Catalog</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
       </nav>
 
-      <a class="nav-cta" href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="nav-cta" href="#contact" aria-label="Order through Instagram">
+        <span class="instagram-icon" aria-hidden="true"></span>
+        <span>Order</span>
+      </a>
     </div>
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div>
-          <span class="eyebrow">Handcrafted with love</span>
-          <h1>Customized gifts <span class="brand-accent">made beautiful.</span></h1>
-          <p class="subtitle">
-            VPrepStudio creates personalized handmade gifts, custom keepsakes, and colorful chenille pipe cleaner flowers
-            for birthdays, weddings, baby showers, celebrations, corporate gifting, and everyday moments worth remembering.
-          </p>
-
-          <div class="cta-row">
-            <a class="primary-btn" href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">Order on Instagram</a>
-            <a class="secondary-btn" href="#products">Explore designs</a>
+    <section class="hero" id="gifts">
+      <div class="container hero-shell">
+        <div class="hero-top">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Handmade · Personalized · Delivered Worldwide</span>
+            <h1 class="serif">Gifts made by hand, <em>tailored to you.</em></h1>
           </div>
 
-          <div class="mini-stats">
-            <span><strong>Custom</strong> gift creations</span>
-            <span><strong>Bulk orders</strong> available</span>
-            <span><strong>Worldwide</strong> delivery</span>
-          </div>
-        </div>
-
-        <div class="logo-panel">
-          <div class="logo-circle">
-            <img src="VPrePStudio.logo.jpeg" alt="VPrepStudio logo design" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="section-header">
-          <h2>About VPrepStudio</h2>
-          <p>
-            We design thoughtful, personalized gifts inspired by color, creativity, and connection. From custom floral gifts
-            and gift hampers to wedding favors and home decor, every creation is handcrafted to reflect your message, theme, or occasion.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="card">
-            <h3>What we create</h3>
+          <div class="hero-summary reveal reveal-delay-1">
             <p>
-              From charming keepsakes to custom event favors, our work brings together playful textures, elegant color palettes,
-              and detailed finishing to make each order feel one of a kind.
+              Our custom chenille pipe cleaner floral arrangements, keepsakes, and gift styling are designed to feel personal,
+              thoughtful, and beautifully made for life’s most meaningful moments.
             </p>
-            <ul class="check-list">
-              <li>Personalized gifts for birthdays, anniversaries, and milestones</li>
-              <li>Custom bridal, baby shower, and party favors</li>
-              <li>Bulk orders for events, gifting, and wholesale requests</li>
-              <li>Worldwide delivery for customers across borders</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Our style</h3>
-            <p>
-              VPrepStudio blends modern gifting with handcrafted storytelling. Whether you want a minimal luxury look, a playful occasion theme,
-              or a deeply personal custom design, we work closely with you to bring it to life.
-            </p>
-            <ul class="check-list">
-              <li>Customized colors, names, initials, and themes</li>
-              <li>Elegant gifting presentation for special moments</li>
-              <li>Creative ideas for personal, event, and corporate gifting</li>
-              <li>Friendly, detail-focused service from concept to worldwide delivery</li>
+            <ul class="highlight">
+              <li>Custom, bulk, and worldwide orders welcome</li>
             </ul>
           </div>
         </div>
+
+        <div class="hero-gallery" aria-label="Handcrafted gift gallery">
+          <div class="gallery-item tall reveal" data-tone="warm">
+            <div class="chenille-scene bouquet-scene">
+              <span class="flower f1"></span>
+              <span class="flower f2"></span>
+              <span class="flower f3"></span>
+              <span class="flower f4"></span>
+              <span class="stem s1"></span>
+              <span class="stem s2"></span>
+              <span class="stem s3"></span>
+            </div>
+            <span>Floral keepsakes</span>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-1" data-tone="sage">
+            <div class="chenille-scene frame-scene">
+              <span class="frame-arch"></span>
+              <span class="frame-arch inner"></span>
+              <span class="mini-flower flower-a"></span>
+              <span class="mini-flower flower-b"></span>
+              <span class="mini-flower flower-c"></span>
+            </div>
+            <span>Gift styling</span>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-2" data-tone="blush">
+            <div class="chenille-scene tray-scene">
+              <span class="tray"></span>
+              <span class="button bloom one"></span>
+              <span class="button bloom two"></span>
+              <span class="button bloom three"></span>
+            </div>
+            <span>Personalized frames</span>
+          </div>
+
+          <div class="gallery-item tall reveal reveal-delay-3" data-tone="terracotta">
+            <div class="chenille-scene box-scene">
+              <span class="gift-box"></span>
+              <span class="ribbon"></span>
+              <span class="mini-bloom b1"></span>
+              <span class="mini-bloom b2"></span>
+            </div>
+            <span>Handcrafted detail</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="products">
+    <section class="occasions" id="occasions">
       <div class="container">
-        <div class="section-header">
-          <h2>Gift collections</h2>
-          <p>Find handmade gift ideas for birthdays, weddings, baby showers, anniversaries, corporate events, and personal milestones.</p>
+        <div class="occasions-header reveal">
+          <div>
+            <span class="occasions-tag">Made for the moment</span>
+            <h2 class="serif">Find a gift by occasion.</h2>
+          </div>
+          <p class="occasions-description">
+            Thoughtful pieces for every milestone, from tender celebrations to polished corporate gifting—each one tailored to the story behind it.
+          </p>
         </div>
 
-        <div class="features-grid">
-          <article class="feature">
-            <div class="feature-icon">🎁</div>
-            <h3>Custom Gift Sets</h3>
-            <p>Personalized gift bundles designed around the recipient’s style and occasion.</p>
+        <div class="occasion-grid">
+          <article class="occasion-card reveal">
+            <h3 class="serif">Birthdays</h3>
+            <p>Bright, personal gifts that feel joyful, playful, and made just for their favorite person.</p>
           </article>
-
-          <article class="feature">
-            <div class="feature-icon">💐</div>
-            <h3>Floral & Keepsake Designs</h3>
-            <p>Handmade arrangements and décor pieces with soft, elegant visual detail.</p>
+          <article class="occasion-card reveal reveal-delay-1">
+            <h3 class="serif">Weddings</h3>
+            <p>Elegant keepsakes and floral details that celebrate love, connection, and lasting memories.</p>
           </article>
-
-          <article class="feature">
-            <div class="feature-icon">🎉</div>
-            <h3>Bulk Event Favors</h3>
-            <p>Birthday, celebration, and special-event favors with scalable bulk ordering for groups and occasions.</p>
+          <article class="occasion-card reveal reveal-delay-2">
+            <h3 class="serif">Baby showers</h3>
+            <p>Soft, charming designs that honor new beginnings with warmth, sweetness, and personality.</p>
           </article>
-
-          <article class="feature">
-            <div class="feature-icon">🌍</div>
-            <h3>Worldwide Delivery</h3>
-            <p>Thoughtful gifting with international shipping support for customers around the world.</p>
+          <article class="occasion-card reveal reveal-delay-3">
+            <h3 class="serif">Home & milestones</h3>
+            <p>Keepsakes for new homes, first achievements, and every meaningful chapter worth remembering.</p>
           </article>
-        </div>
-
-        <div class="gallery-strip" aria-label="Example gift categories">
-          <div class="gallery-card"><div class="gallery-inner">Birthday Gifts</div></div>
-          <div class="gallery-card"><div class="gallery-inner">Wedding Keepsakes</div></div>
-          <div class="gallery-card"><div class="gallery-inner">Custom Occasion Sets</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="catalog">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our product catalog</h2>
-          <p>Browse personalized gift ideas, handmade floral arrangements, custom accessories, event favors, and decorative keepsakes for every occasion.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <h3>Gift & Keepsake Accessories</h3>
-            <p>Personalized pieces perfect for gifting, travel, and everyday charm.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Keychains</span>
-              <span class="catalog-tag">Flower Keychains</span>
-              <span class="catalog-tag">Teddy Keychains</span>
-              <span class="catalog-tag">Dog Paw Keychains</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Floral Arrangements</h3>
-            <p>Custom floral details designed to brighten celebrations and gifting moments.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Single Rose</span>
-              <span class="catalog-tag">Lily</span>
-              <span class="catalog-tag">Sunflower</span>
-              <span class="catalog-tag">Bouquet</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Fashion & Carry</h3>
-            <p>Handcrafted accessories that blend utility, beauty, and personal style.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Jute Bags</span>
-              <span class="catalog-tag">Handbags</span>
-              <span class="catalog-tag">Hair Clutch</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Home & Decor</h3>
-            <p>Decor pieces for living spaces, entrances, and festive occasions.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Mirror Wall</span>
-              <span class="catalog-tag">Mirror Stand</span>
-              <span class="catalog-tag">Door Decor</span>
-              <span class="catalog-tag">Door Hangings</span>
-              <span class="catalog-tag">Windchime</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Personalized Name & Gift Items</h3>
-            <p>Custom elements for gifting, personal identity, and home styling.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Nameplate</span>
-              <span class="catalog-tag">Photo Frames</span>
-              <span class="catalog-tag">Mirror Keychain</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Vehicle & Everyday Charm</h3>
-            <p>Small decorative items that add personality to cars, bikes, and everyday use.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Car Decor</span>
-              <span class="catalog-tag">Bike Charm</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Hair & Beauty Accessories</h3>
-            <p>Stylish hairpieces and beauty accessories with a handmade finish.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Hair Band</span>
-              <span class="catalog-tag">Hair Rubber</span>
-              <span class="catalog-tag">Hair Clips</span>
-              <span class="catalog-tag">Bangle Hair Accessory</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Desk & Study</h3>
-            <p>Functional and thoughtful accessories for study spaces and gifting.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Pen Holder</span>
-              <span class="catalog-tag">Pencil Holder</span>
-              <span class="catalog-tag">Pen Bouquet</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Kids & Fun Gifts</h3>
-            <p>Bright, cheerful pieces made for children and playful gifting moments.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Kids Collection</span>
-              <span class="catalog-tag">Toys</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Phone & Utility Accessories</h3>
-            <p>Practical yet stylish items for everyday convenience.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Phone Holder</span>
-              <span class="catalog-tag">Charging Accessory</span>
-              <span class="catalog-tag">Phone Cover</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Festive & Spiritual Decor</h3>
-            <p>Meaningful and occasion-ready pieces for festive home styling.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Shubh Labh</span>
-              <span class="catalog-tag">Pooja Mandap</span>
-              <span class="catalog-tag">Deepam Holder</span>
-              <span class="catalog-tag">Curtain Holder</span>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Collectors & Custom Designs</h3>
-            <p>Original handmade items crafted to suit unique preferences and personal stories.</p>
-            <div class="catalog-tags">
-              <span class="catalog-tag">Custom Gift</span>
-              <span class="catalog-tag">Bulk Orders</span>
-              <span class="catalog-tag">Worldwide Delivery</span>
-            </div>
+          <article class="occasion-card reveal reveal-delay-4">
+            <h3 class="serif">Corporate gifting</h3>
+            <p>Polished, thoughtful presents that leave an impression and reflect your brand with care.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="process">
+    <section class="process" id="custom-orders">
       <div class="container">
-        <div class="section-header">
-          <h2>How it works</h2>
-          <p>Simple, creative, and personalized from first message to final gift presentation.</p>
+        <div class="process-head reveal">
+          <h2 class="serif">How a custom order works</h2>
+          <span class="process-tag">Four thoughtful steps</span>
         </div>
 
         <div class="process-grid">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Share your idea</h3>
-            <p>Tell us the occasion, color palette, theme, or recipient details you have in mind.</p>
-          </div>
+          <article class="step reveal">
+            <div class="step-number">01</div>
+            <h3 class="serif">Share your idea</h3>
+            <p>Tell us the occasion, colors, theme, and who it is for.</p>
+          </article>
 
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Design your concept</h3>
-            <p>We create a style direction and refine the final look based on your preferences.</p>
-          </div>
+          <article class="step reveal reveal-delay-1">
+            <div class="step-number">02</div>
+            <h3 class="serif">Shape the concept</h3>
+            <p>We refine the look around your preferences and message.</p>
+          </article>
 
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Craft the piece</h3>
-            <p>Each gift is handcrafted with careful attention to details, color, and finishing.</p>
-          </div>
+          <article class="step reveal reveal-delay-2">
+            <div class="step-number">03</div>
+            <h3 class="serif">Craft the piece</h3>
+            <p>Every detail is made and finished carefully by hand.</p>
+          </article>
 
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3>Deliver delight</h3>
-            <p>Receive a gift-ready product that is meaningful, beautiful, and made with love.</p>
-          </div>
+          <article class="step reveal reveal-delay-3">
+            <div class="step-number">04</div>
+            <h3 class="serif">Deliver delight</h3>
+            <p>Your gift is prepared for its journey, near or worldwide.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section class="cta-banner" id="about">
+      <div class="container">
+        <div class="cta-shell reveal">
+          <span class="cta-tag">Your idea, made personal</span>
+          <h2 class="serif">Tell us the story — <em>we'll make it a gift.</em></h2>
+          <p>Message the studio for custom gifts, event favors, bulk requests, and worldwide shipping.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
       <div class="container contact-grid">
-        <div class="card contact-card">
-          <h3>Let’s create something special</h3>
-          <p>
-            Whether you need a one-of-a-kind personalized gift, bespoke event favors, or thoughtful custom gifting for a special occasion,
-            VPrepStudio is ready to help bring your idea to life.
-          </p>
+        <div class="contact-card reveal">
+          <span class="contact-kicker">Order by message</span>
+          <h3 class="serif">Start your custom piece</h3>
+          <p>Tell us your occasion, preferred colors, and gifting story. We’ll help shape a handcrafted piece that feels truly personal.</p>
 
-          <div class="contact-box">
-            <div class="contact-item">
-              <strong>Instagram</strong>
-              <a class="contact-link" href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">@vprepstudio</a>
+          <form class="order-form" action="mailto:vprepstudio@gmail.com" method="post" enctype="text/plain">
+            <div class="field-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="Name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="Email" placeholder="you@example.com" required />
+              </label>
             </div>
-            <div class="contact-item">
-              <strong>Best for</strong>
-              <span>Bulk orders, custom gifts, event favors, keepsakes</span>
+            <label>
+              <span>Occasion</span>
+              <input type="text" name="Occasion" placeholder="Birthday, wedding, baby shower..." required />
+            </label>
+            <label>
+              <span>Project details</span>
+              <textarea rows="5" name="Project details" placeholder="Tell us about your colors, theme, message, or gifting idea..." required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit">Send inquiry</button>
+              <a href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">DM on Instagram</a>
             </div>
-            <div class="contact-item">
-              <strong>Perfect for</strong>
-              <span>Birthdays, weddings, baby showers, corporate gifting, global delivery</span>
-            </div>
-            <div class="contact-item">
-              <strong>Message us</strong>
-              <span>DM on Instagram for quotes, custom requests, and order details</span>
-            </div>
+          </form>
+        </div>
+
+        <aside class="info-card reveal reveal-delay-1">
+          <div class="mini-panel">
+            <span class="mini-label">Instagram</span>
+            <a href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">@vprepstudio</a>
           </div>
-        </div>
-
-        <div class="card">
-          <h3>Why choose VPrepStudio?</h3>
-          <ul class="check-list">
-            <li>Handmade with creativity and care</li>
-            <li>Custom designs tailored to your idea</li>
-            <li>Bulk order support for events and gifting needs</li>
-            <li>Worldwide delivery for international customers</li>
-            <li>Perfect for meaningful occasions</li>
-          </ul>
-        </div>
+          <div class="mini-panel">
+            <span class="mini-label">Best for</span>
+            <p>Custom gifts, event favors, floral keepsakes, milestone gifting</p>
+          </div>
+          <div class="mini-panel">
+            <span class="mini-label">Shipping</span>
+            <p>Worldwide delivery available for bespoke and bulk orders</p>
+          </div>
+          <div class="mini-panel highlight-panel">
+            <span class="mini-label">Handcrafted promise</span>
+            <p>Every piece is designed in soft, warm tones and made with care by hand.</p>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      © 2026 VPrepStudio • Customized gifts with handmade charm • Follow us on Instagram: <a href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer" class="contact-link">@vprepstudio</a>
-    </div>
-  </footer>
 </body>
 </html>
