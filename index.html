@@ -207,42 +207,44 @@
       font-size: 1.25rem;
     }
 
-    .hero-gallery {
+    .catalog-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .gallery-item {
-      min-height: 300px;
-      border-radius: 28px;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      position: relative;
+    .catalog-card {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 22px;
+      border-radius: 22px;
+      background: var(--panel);
       box-shadow: var(--shadow);
       border: 1px solid rgba(44, 64, 46, 0.08);
     }
 
-    .gallery-item.tall { min-height: 420px; }
-
-    .gallery-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(20, 20, 20, 0.12), rgba(20,20,20,0.2));
+    .catalog-number {
+      color: var(--terracotta);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    .gallery-item span {
-      position: absolute;
-      left: 20px;
-      bottom: 18px;
-      z-index: 1;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #fff;
-      font-weight: 700;
+    .catalog-card h3 {
+      margin: 24px 0 10px;
+      color: var(--forest);
+      font-size: 1.75rem;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    .catalog-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
     }
 
     .occasions {
@@ -432,232 +434,6 @@
         transform: translateY(0);
       }
     }
-
-    .chenille-scene {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(34, 29, 21, 0.12));
-    }
-
-    .toy-scene {
-      background: linear-gradient(180deg, #e8d8ca 0%, #c58e7b 100%);
-    }
-
-    .toy-ear,
-    .toy-head,
-    .toy-body,
-    .toy-eye,
-    .toy-nose,
-    .toy-belly {
-      position: absolute;
-      display: block;
-    }
-
-    .toy-ear {
-      width: 72px;
-      height: 82px;
-      top: 22%;
-      border-radius: 50%;
-      background: #9a5f59;
-      box-shadow: inset 0 0 0 12px rgba(247, 214, 194, 0.45), 0 12px 18px rgba(69, 46, 32, 0.15);
-    }
-
-    .toy-ear.left { left: 24%; transform: rotate(-18deg); }
-    .toy-ear.right { right: 24%; transform: rotate(18deg); }
-
-    .toy-head {
-      width: 176px;
-      height: 164px;
-      left: 50%;
-      top: 18%;
-      transform: translateX(-50%);
-      border-radius: 48% 48% 44% 44%;
-      background: #c77d68;
-      box-shadow: inset 0 -12px 0 rgba(115, 65, 58, 0.12), 0 18px 24px rgba(69, 46, 32, 0.16);
-    }
-
-    .toy-body {
-      width: 190px;
-      height: 160px;
-      left: 50%;
-      bottom: 9%;
-      transform: translateX(-50%);
-      border-radius: 48% 48% 30% 30%;
-      background: #b96c60;
-      box-shadow: 0 18px 24px rgba(69, 46, 32, 0.16);
-    }
-
-    .toy-eye {
-      width: 14px;
-      height: 14px;
-      top: 42%;
-      border-radius: 50%;
-      background: #3d2930;
-      z-index: 1;
-    }
-
-    .toy-eye.left { left: 42%; }
-    .toy-eye.right { right: 42%; }
-
-    .toy-nose {
-      width: 24px;
-      height: 18px;
-      left: 50%;
-      top: 54%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: #6e3d4a;
-      z-index: 1;
-    }
-
-    .toy-belly {
-      width: 94px;
-      height: 82px;
-      left: 50%;
-      bottom: 17%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: #e8b9a0;
-      z-index: 1;
-    }
-
-    .flower,
-    .mini-flower,
-    .button,
-    .mini-bloom {
-      position: absolute;
-      display: block;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 50% 35%, rgba(255,255,255,0.85) 0 12%, rgba(255,255,255,0.15) 13%, transparent 14%),
-        repeating-radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.18) 0 10%, rgba(0,0,0,0.03) 10% 15%, transparent 15% 20%),
-        linear-gradient(135deg, #f3d2af 0%, #cf7a57 28%, #7a3d4f 100%);
-      box-shadow: inset 0 0 0 8px rgba(255,255,255,0.08), 0 10px 16px rgba(69, 46, 32, 0.18);
-    }
-
-    .stem {
-      position: absolute;
-      width: 10px;
-      height: 170px;
-      background: linear-gradient(180deg, #6a925c 0%, #3d5d39 100%);
-      border-radius: 999px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      box-shadow: inset 0 0 10px rgba(255,255,255,0.12);
-    }
-
-    .s1 { left: 38%; height: 210px; }
-    .s2 { left: 52%; height: 240px; }
-    .s3 { left: 62%; height: 200px; }
-
-    .flower.f1 { width: 90px; height: 90px; left: 20%; top: 15%; }
-    .flower.f2 { width: 110px; height: 110px; left: 45%; top: 8%; }
-    .flower.f3 { width: 74px; height: 74px; left: 60%; top: 26%; }
-    .flower.f4 { width: 96px; height: 96px; left: 34%; top: 34%; }
-
-    .frame-scene .frame-arch {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border: 14px solid rgba(255,255,255,0.7);
-      border-bottom: none;
-      border-radius: 200px 200px 0 0;
-      left: 50%;
-      top: 42%;
-      transform: translate(-50%, -50%);
-      background: transparent;
-    }
-
-    .frame-scene .frame-arch.inner {
-      width: 110px;
-      height: 110px;
-      border-width: 10px;
-      top: 55%;
-      border-color: rgba(122,91,73,0.8);
-    }
-
-    .mini-flower {
-      width: 44px;
-      height: 44px;
-      background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.7) 0 10%, transparent 11%), linear-gradient(135deg, #d79c76 0%, #b55b5d 55%, #8a5a39 100%);
-    }
-
-    .flower-a { left: 26%; top: 58%; }
-    .flower-b { left: 48%; top: 66%; }
-    .flower-c { left: 68%; top: 52%; }
-
-    .tray-scene .tray {
-      position: absolute;
-      left: 18%;
-      right: 18%;
-      bottom: 10%;
-      height: 30%;
-      border-radius: 30px 30px 24px 24px;
-      background: linear-gradient(180deg, #f0d8b7 0%, #d4ad7a 100%);
-      border: 1px solid rgba(122,91,73,0.25);
-      box-shadow: inset 0 14px 18px rgba(255,255,255,0.18);
-    }
-
-    .tray-scene .bloom {
-      width: 72px;
-      height: 72px;
-      bottom: 24%;
-    }
-
-    .tray-scene .bloom.one { left: 22%; }
-    .tray-scene .bloom.two { left: 44%; }
-    .tray-scene .bloom.three { left: 66%; }
-
-    .box-scene .gift-box {
-      position: absolute;
-      width: 190px;
-      height: 160px;
-      left: 50%;
-      bottom: 14%;
-      transform: translateX(-50%);
-      border-radius: 18px;
-      background: linear-gradient(180deg, #c97d5d 0%, #8f5047 100%);
-      border: 1px solid rgba(75,44,30,0.16);
-      box-shadow: 0 22px 26px rgba(77, 46, 35, 0.18);
-    }
-
-    .box-scene .ribbon {
-      position: absolute;
-      width: 26px;
-      height: 180px;
-      left: 50%;
-      bottom: 14%;
-      transform: translateX(-50%);
-      background: linear-gradient(180deg, #f4e5d2 0%, #cf9b67 100%);
-      border-radius: 999px;
-      box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
-    }
-
-    .box-scene .ribbon::before,
-    .box-scene .ribbon::after {
-      content: "";
-      position: absolute;
-      width: 110px;
-      height: 26px;
-      background: linear-gradient(90deg, #f5e7d7 0%, #d3a06e 100%);
-      border-radius: 999px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .box-scene .ribbon::before { top: 16%; }
-    .box-scene .ribbon::after { top: 52%; }
-
-    .mini-bloom {
-      width: 56px;
-      height: 56px;
-      bottom: 34%;
-    }
-
-    .mini-bloom.b1 { left: 28%; }
-    .mini-bloom.b2 { right: 28%; }
 
     .contact-section {
       padding: 84px 0 100px;
@@ -873,9 +649,7 @@
       h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
       .hero-summary { font-size: 0.96rem; }
 
-      .hero-gallery, .occasion-grid, .process-grid, .field-row { grid-template-columns: 1fr; }
-
-      .gallery-item, .gallery-item.tall { min-height: 260px; }
+      .catalog-grid, .occasion-grid, .process-grid, .field-row { grid-template-columns: 1fr; }
 
       .occasions-header, .process-head { align-items: start; }
       .occasions, .process, .contact-section { padding-top: 58px; }
@@ -930,54 +704,70 @@
           </div>
         </div>
 
-        <div class="hero-gallery" aria-label="Handcrafted gift gallery">
-          <div class="gallery-item tall reveal" data-tone="warm">
-            <div class="chenille-scene bouquet-scene">
-              <span class="flower f1"></span>
-              <span class="flower f2"></span>
-              <span class="flower f3"></span>
-              <span class="flower f4"></span>
-              <span class="stem s1"></span>
-              <span class="stem s2"></span>
-              <span class="stem s3"></span>
+        <div class="catalog-grid" aria-label="VPrep catalog">
+          <article class="catalog-card reveal">
+            <span class="catalog-number">01 / Floral</span>
+            <div>
+              <h3 class="serif">Chenille flower bouquets</h3>
+              <p>Handmade pipe-cleaner flowers arranged in custom colors and styles.</p>
             </div>
-            <span>Chenille flowers</span>
-          </div>
-
-          <div class="gallery-item reveal reveal-delay-1" data-tone="sage">
-            <div class="chenille-scene frame-scene">
-              <span class="frame-arch"></span>
-              <span class="frame-arch inner"></span>
-              <span class="mini-flower flower-a"></span>
-              <span class="mini-flower flower-b"></span>
-              <span class="mini-flower flower-c"></span>
+          </article>
+          <article class="catalog-card reveal reveal-delay-1">
+            <span class="catalog-number">02 / Keepsake</span>
+            <div>
+              <h3 class="serif">Personalized flower keepsakes</h3>
+              <p>Long-lasting floral gifts designed around a name, message, or memory.</p>
             </div>
-            <span>Flower keepsakes</span>
-          </div>
-
-          <div class="gallery-item reveal reveal-delay-2" data-tone="blush">
-            <div class="chenille-scene tray-scene">
-              <span class="tray"></span>
-              <span class="button bloom one"></span>
-              <span class="button bloom two"></span>
-              <span class="button bloom three"></span>
+          </article>
+          <article class="catalog-card reveal reveal-delay-2">
+            <span class="catalog-number">03 / Frames</span>
+            <div>
+              <h3 class="serif">Decorative floral frames</h3>
+              <p>Custom framed pieces for birthdays, weddings, nurseries, and new homes.</p>
             </div>
-            <span>Personalized flowers</span>
-          </div>
-
-          <div class="gallery-item tall reveal reveal-delay-3" data-tone="terracotta">
-            <div class="chenille-scene toy-scene">
-              <span class="toy-ear left"></span>
-              <span class="toy-ear right"></span>
-              <span class="toy-head"></span>
-              <span class="toy-body"></span>
-              <span class="toy-eye left"></span>
-              <span class="toy-eye right"></span>
-              <span class="toy-nose"></span>
-              <span class="toy-belly"></span>
+          </article>
+          <article class="catalog-card reveal reveal-delay-3">
+            <span class="catalog-number">04 / Toys</span>
+            <div>
+              <h3 class="serif">Chenille toys</h3>
+              <p>Soft, playful handmade characters and giftable toy designs made to order.</p>
             </div>
-            <span>Chenille toys</span>
-          </div>
+          </article>
+          <article class="catalog-card reveal reveal-delay-4">
+            <span class="catalog-number">05 / Gifting</span>
+            <div>
+              <h3 class="serif">Gift styling and bundles</h3>
+              <p>Thoughtful combinations of flowers, keepsakes, packaging, and finishing details.</p>
+            </div>
+          </article>
+          <article class="catalog-card reveal">
+            <span class="catalog-number">06 / Events</span>
+            <div>
+              <h3 class="serif">Event favors</h3>
+              <p>Coordinated handmade favors for weddings, showers, celebrations, and launches.</p>
+            </div>
+          </article>
+          <article class="catalog-card reveal reveal-delay-1">
+            <span class="catalog-number">07 / Bulk</span>
+            <div>
+              <h3 class="serif">Bulk orders</h3>
+              <p>Consistent custom pieces for parties, teams, organizations, and special events.</p>
+            </div>
+          </article>
+          <article class="catalog-card reveal reveal-delay-2">
+            <span class="catalog-number">08 / Corporate</span>
+            <div>
+              <h3 class="serif">Corporate gifting</h3>
+              <p>Polished personalized gifts that carry your brand and appreciation with care.</p>
+            </div>
+          </article>
+          <article class="catalog-card reveal reveal-delay-3">
+            <span class="catalog-number">09 / Jewelry</span>
+            <div>
+              <h3 class="serif">Personalized jewelry</h3>
+              <p>Thoughtful wearable pieces made to complement your style or mark a special moment.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
