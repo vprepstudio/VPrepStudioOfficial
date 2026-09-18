@@ -39,6 +39,7 @@
       background: var(--cream);
       color: var(--charcoal);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img { max-width: 100%; display: block; }
@@ -87,14 +88,8 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--forest) 0%, var(--terracotta) 100%);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.35rem;
-      font-style: italic;
-      font-weight: 700;
+      object-fit: cover;
+      object-position: center;
       box-shadow: 0 8px 18px rgba(44,64,46,0.15);
     }
 
@@ -445,6 +440,88 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(34, 29, 21, 0.12));
     }
 
+    .toy-scene {
+      background: linear-gradient(180deg, #e8d8ca 0%, #c58e7b 100%);
+    }
+
+    .toy-ear,
+    .toy-head,
+    .toy-body,
+    .toy-eye,
+    .toy-nose,
+    .toy-belly {
+      position: absolute;
+      display: block;
+    }
+
+    .toy-ear {
+      width: 72px;
+      height: 82px;
+      top: 22%;
+      border-radius: 50%;
+      background: #9a5f59;
+      box-shadow: inset 0 0 0 12px rgba(247, 214, 194, 0.45), 0 12px 18px rgba(69, 46, 32, 0.15);
+    }
+
+    .toy-ear.left { left: 24%; transform: rotate(-18deg); }
+    .toy-ear.right { right: 24%; transform: rotate(18deg); }
+
+    .toy-head {
+      width: 176px;
+      height: 164px;
+      left: 50%;
+      top: 18%;
+      transform: translateX(-50%);
+      border-radius: 48% 48% 44% 44%;
+      background: #c77d68;
+      box-shadow: inset 0 -12px 0 rgba(115, 65, 58, 0.12), 0 18px 24px rgba(69, 46, 32, 0.16);
+    }
+
+    .toy-body {
+      width: 190px;
+      height: 160px;
+      left: 50%;
+      bottom: 9%;
+      transform: translateX(-50%);
+      border-radius: 48% 48% 30% 30%;
+      background: #b96c60;
+      box-shadow: 0 18px 24px rgba(69, 46, 32, 0.16);
+    }
+
+    .toy-eye {
+      width: 14px;
+      height: 14px;
+      top: 42%;
+      border-radius: 50%;
+      background: #3d2930;
+      z-index: 1;
+    }
+
+    .toy-eye.left { left: 42%; }
+    .toy-eye.right { right: 42%; }
+
+    .toy-nose {
+      width: 24px;
+      height: 18px;
+      left: 50%;
+      top: 54%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: #6e3d4a;
+      z-index: 1;
+    }
+
+    .toy-belly {
+      width: 94px;
+      height: 82px;
+      left: 50%;
+      bottom: 17%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: #e8b9a0;
+      z-index: 1;
+    }
+
     .flower,
     .mini-flower,
     .button,
@@ -761,28 +838,53 @@
       .occasion-grid, .process-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .contact-grid { gap: 18px; }
     }
 
     @media (max-width: 720px) {
       .nav {
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 16px 0;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 12px 0;
       }
 
+      .brand { font-size: 1rem; gap: 8px; }
+      .brand-mark { width: 36px; height: 36px; }
+
       .nav-links {
-        justify-content: center;
-        gap: 18px;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 2px 0 4px;
+        scrollbar-width: none;
       }
+
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { flex: 0 0 auto; font-size: 0.82rem; }
+      .nav-cta { padding: 10px 14px; font-size: 0.82rem; }
+
+      .hero { padding-top: 30px; }
+      .hero-top { gap: 22px; margin-bottom: 24px; }
+      .eyebrow { margin-bottom: 14px; letter-spacing: 0.16em; }
+      h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
+      .hero-summary { font-size: 0.96rem; }
 
       .hero-gallery, .occasion-grid, .process-grid, .field-row { grid-template-columns: 1fr; }
 
-      .gallery-item { min-height: 240px; }
-      .gallery-item.tall { min-height: 300px; }
+      .gallery-item, .gallery-item.tall { min-height: 260px; }
 
       .occasions-header, .process-head { align-items: start; }
+      .occasions, .process, .contact-section { padding-top: 58px; }
+      .occasion-card { min-height: 0; padding: 22px 18px; }
+      .cta-banner { padding-bottom: 58px; }
       .cta-shell { padding: 42px 18px; }
       .contact-card, .info-card { padding: 22px 18px; }
+      .form-actions { align-items: stretch; }
+      .form-actions a.instagram-button { width: 100%; }
     }
   </style>
 </head>
@@ -790,7 +892,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#home" class="brand" aria-label="VPrep home">
-        <span class="brand-mark">V</span>
+        <img class="brand-mark" src="VPrePStudio.logo.jpeg" alt="VPrep Studio logo" />
         <span>VPrep</span>
       </a>
 
@@ -839,7 +941,7 @@
               <span class="stem s2"></span>
               <span class="stem s3"></span>
             </div>
-            <span>Floral keepsakes</span>
+            <span>Chenille flowers</span>
           </div>
 
           <div class="gallery-item reveal reveal-delay-1" data-tone="sage">
@@ -850,7 +952,7 @@
               <span class="mini-flower flower-b"></span>
               <span class="mini-flower flower-c"></span>
             </div>
-            <span>Gift styling</span>
+            <span>Flower keepsakes</span>
           </div>
 
           <div class="gallery-item reveal reveal-delay-2" data-tone="blush">
@@ -860,17 +962,21 @@
               <span class="button bloom two"></span>
               <span class="button bloom three"></span>
             </div>
-            <span>Personalized frames</span>
+            <span>Personalized flowers</span>
           </div>
 
           <div class="gallery-item tall reveal reveal-delay-3" data-tone="terracotta">
-            <div class="chenille-scene box-scene">
-              <span class="gift-box"></span>
-              <span class="ribbon"></span>
-              <span class="mini-bloom b1"></span>
-              <span class="mini-bloom b2"></span>
+            <div class="chenille-scene toy-scene">
+              <span class="toy-ear left"></span>
+              <span class="toy-ear right"></span>
+              <span class="toy-head"></span>
+              <span class="toy-body"></span>
+              <span class="toy-eye left"></span>
+              <span class="toy-eye right"></span>
+              <span class="toy-nose"></span>
+              <span class="toy-belly"></span>
             </div>
-            <span>Handcrafted detail</span>
+            <span>Chenille toys</span>
           </div>
         </div>
       </div>
