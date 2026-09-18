@@ -699,6 +699,24 @@
       text-underline-offset: 4px;
     }
 
+    .form-actions a.instagram-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--forest) 0%, var(--terracotta) 100%);
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 16px 26px rgba(44,64,46,0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-actions a.instagram-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 28px rgba(44,64,46,0.2);
+    }
+
     .info-card {
       display: grid;
       gap: 16px;
@@ -943,40 +961,22 @@
     <section class="contact-section" id="contact">
       <div class="container contact-grid">
         <div class="contact-card reveal">
-          <span class="contact-kicker">Order by message</span>
-          <h3 class="serif">Start your custom piece</h3>
-          <p>Tell us your occasion, preferred colors, and gifting story. We’ll help shape a handcrafted piece that feels truly personal.</p>
-
-          <form class="order-form" action="mailto:vprepstudio@gmail.com" method="post" enctype="text/plain">
-            <div class="field-row">
-              <label>
-                <span>Name</span>
-                <input type="text" name="Name" placeholder="Your name" required />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" name="Email" placeholder="you@example.com" required />
-              </label>
-            </div>
-            <label>
-              <span>Occasion</span>
-              <input type="text" name="Occasion" placeholder="Birthday, wedding, baby shower..." required />
-            </label>
-            <label>
-              <span>Project details</span>
-              <textarea rows="5" name="Project details" placeholder="Tell us about your colors, theme, message, or gifting idea..." required></textarea>
-            </label>
-            <div class="form-actions">
-              <button type="submit">Send inquiry</button>
-              <a href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">DM on Instagram</a>
-            </div>
-          </form>
+          <span class="contact-kicker">Connect with the studio</span>
+          <h3 class="serif">Let’s make something personal.</h3>
+          <p>Message us on Instagram with your occasion, preferred colors, and gifting story. We’ll help shape a handcrafted piece that feels truly personal.</p>
+          <div class="form-actions">
+            <a class="instagram-button" href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">DM on Instagram</a>
+          </div>
         </div>
 
         <aside class="info-card reveal reveal-delay-1">
           <div class="mini-panel">
             <span class="mini-label">Instagram</span>
             <a href="https://www.instagram.com/vprepstudio" target="_blank" rel="noopener noreferrer">@vprepstudio</a>
+          </div>
+          <div class="mini-panel">
+            <span class="mini-label">Email</span>
+            <a href="mailto:vprepstudio@gmail.com">vprepstudio@gmail.com</a>
           </div>
           <div class="mini-panel">
             <span class="mini-label">Best for</span>
